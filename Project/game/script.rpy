@@ -1,27 +1,30 @@
 
-define e=Character("Eileen")
-define l=Character("Lucy")
+define Z=Character("Zac")
+define M=Character("Mint")
+define W=Character("Win")
 
 label start:
 
     #scene #scenefile
 
+    " ณ โรงเรียนแห่งหนึ่ง "
+
     #show #characterfile
-    e "Hi I'm Eileen."
+    Z "Hi I'm Eileen."
 
     #show #lucy at right
-    l "Hi I'm Lucy."
+    M "Hi I'm Lucy."
     menu:
         "Hey Lucy you look nice today!":
             jump lucylooknice
         "Hey Lucy you suck!":
             jump lucysuck
     label lucylooknice:
-        l "wow thanks!"
+        M "wow thanks!"
         return
 
     label lucysuck:
-        l "WTF DOOD!?"
+        M "WTF DOOD!?"
         "Lucy walk away"
         "hellow"
         "how are you"
