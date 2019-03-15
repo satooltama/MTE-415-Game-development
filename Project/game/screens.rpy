@@ -1512,7 +1512,36 @@ style slider_pref_slider:
     variant "small"
     xsize 900
 
+screen stats():
+
+    modal False
+    zorder 100
+    vbox:
+        xalign 0.5
+        ypos 0.01
+        text "{color=#000}Enemy: [enemy] You: [score] Ties: [ties]{/color}"
 
 
+screen cheats():
+
+    tag menu
+
+    use game_menu(_("Cheats"), scroll="viewport"):
+
+        style_prefix "cheats"
 
 
+        hbox:
+            vbox:
+                label "Never Lose"
+
+                textbutton _("On") action SetField(persistent, "cheating", 1)
+                textbutton _("Off") action SetField(persistent, "cheating", 0)
+
+
+style cheats_label is gui_label
+style cheats_label_text is gui_label_text
+style cheats_text is gui_text
+
+style cheats_label_text:
+    size gui.label_text_size
