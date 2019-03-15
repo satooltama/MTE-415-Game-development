@@ -77,8 +77,7 @@ label start:
                 "กรรไกร":
                     $selection = "กรรไกร"
                     $result = renpy.random.choice(['ค้อน', 'กระดาษ', 'กรรไกร'])
-                "End":
-                    return
+
         else:
             menu:
 
@@ -91,8 +90,7 @@ label start:
                 "กรรไกร":
                     $selection = "กรรไกร"
                     $result = "กระดาษ"
-                "End":
-                    return
+
 
     label results1:
 
@@ -186,8 +184,7 @@ label pw_scene:
                 "กรรไกร":
                     $selection = "กรรไกร"
                     $result = renpy.random.choice(['ค้อน', 'กระดาษ', 'กรรไกร'])
-                "End":
-                    return
+
         else:
             menu:
 
@@ -200,8 +197,7 @@ label pw_scene:
                 "กรรไกร":
                     $selection = "กรรไกร"
                     $result = "กระดาษ"
-                "End":
-                    return
+
 
     label results2:
 
@@ -245,7 +241,7 @@ elif result == "กรรไกร":
 
         soder "[selection] ชนะ [result] เหอะ ไอ้อ้วนขาเบียด อย่างแกหน่ะแค่เดินก็แทบจะไม่ไหวอยู่แล้ว"
         $ score += 1
-        if score == 6:
+        if score == 3:
             jump tufin_scene
 
     label lose2:
@@ -312,8 +308,7 @@ label tufin_scene:
                 "กรรไกร":
                     $selection = "กรรไกร"
                     $result = renpy.random.choice(['ค้อน', 'กระดาษ', 'กรรไกร'])
-                "End":
-                    return
+
         else:
             menu:
 
@@ -326,8 +321,7 @@ label tufin_scene:
                 "กรรไกร":
                     $selection = "กรรไกร"
                     $result = "กระดาษ"
-                "End":
-                    return
+
 
     label results:
 
@@ -371,7 +365,7 @@ label tufin_scene:
 
         fin "[selection]แฮ่~![result]"
         $ score += 1
-        if score == 9:
+        if score == 3:
             jump tu_scene
 
     label lose:
@@ -423,8 +417,7 @@ label tu_scene:
                 "กรรไกร":
                     $selection = "กรรไกร"
                     $result = renpy.random.choice(['ค้อน', 'กระดาษ', 'กรรไกร'])
-                "End":
-                    return
+
         else:
             menu:
 
@@ -437,8 +430,6 @@ label tu_scene:
                 "กรรไกร":
                     $selection = "กรรไกร"
                     $result = "กระดาษ"
-                "End":
-                    return
 
     label results4:
 
@@ -536,8 +527,7 @@ label cc_scene:
                 "กรรไกร":
                     $selection = "กรรไกร"
                     $result = renpy.random.choice(['ค้อน', 'กระดาษ', 'กรรไกร'])
-                "End":
-                    return
+
         else:
             menu:
 
@@ -550,8 +540,7 @@ label cc_scene:
                 "กรรไกร":
                     $selection = "กรรไกร"
                     $result = "กระดาษ"
-                "End":
-                    return
+
 
     label results5:
 
