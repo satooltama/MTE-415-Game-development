@@ -213,7 +213,7 @@ label pw_scene:
 
     ####paper####
 
-elif result == "กระดาษ":
+        elif result == "กระดาษ":
             if selection == "ค้อน":
                 jump lose2
             elif selection == "กระดาษ":
@@ -223,7 +223,7 @@ elif result == "กระดาษ":
 
     ####scissors####
 
-elif result == "กรรไกร":
+        elif result == "กรรไกร":
             if selection == "ค้อน":
                 jump win2
             elif selection == "กระดาษ":
@@ -501,7 +501,7 @@ label cc_scene:
     show ccC
     "ท่านชัชช่าปรากฏตัว"
     cc "นายเป็นคนที่ล้ม ม.69 ได้สินะ อยากเจอนายมาตั้งนานแล้ว มาวัดพลังกันหน่อยสิ!"
-    show socerC
+    show soderC
     soder "อย่าดีกว่าท่านทำอะไรผมไม่ได้หรอก!"
     cc "เมื่อก่อนฉันเคยท้าซุปเปอร์แมนต่อยโดยที่ใครแพ้ให้ใส่กางเกงในไว้ข้างนอกเชียวนะ!"
 
