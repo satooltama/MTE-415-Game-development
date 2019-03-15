@@ -2,9 +2,101 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 9: expected 'image_name_component' not found.
-    show 
+File "game/script.rpy", line 154: expected statement.
+    result = "none"
+           ^
+
+File "game/script.rpy", line 155: expected statement.
+    selection = "none"
+              ^
+
+File "game/script.rpy", line 156: expected statement.
+    score = 0
+          ^
+
+File "game/script.rpy", line 157: expected statement.
+    enemy = 0
+          ^
+
+File "game/script.rpy", line 158: expected statement.
+    ties = 0
          ^
 
-Ren'Py Version: Ren'Py 7.1.1.929
-Tue Nov 13 20:53:26 2018
+File "game/script.rpy", line 160: expected statement.
+    persistent.cheating = 0
+                        ^
+
+File "game/script.rpy", line 272: expected statement.
+    result = "none"
+           ^
+
+File "game/script.rpy", line 273: expected statement.
+    selection = "none"
+              ^
+
+File "game/script.rpy", line 274: expected statement.
+    score = 0
+          ^
+
+File "game/script.rpy", line 275: expected statement.
+    enemy = 0
+          ^
+
+File "game/script.rpy", line 276: expected statement.
+    ties = 0
+         ^
+
+File "game/script.rpy", line 278: expected statement.
+    persistent.cheating = 0
+                        ^
+
+File "game/script.rpy", line 404: expected statement.
+    result = "none"
+           ^
+
+File "game/script.rpy", line 405: expected statement.
+    selection = "none"
+              ^
+
+File "game/script.rpy", line 406: expected statement.
+    score = 0
+          ^
+
+File "game/script.rpy", line 407: expected statement.
+    enemy = 0
+          ^
+
+File "game/script.rpy", line 408: expected statement.
+    ties = 0
+         ^
+
+File "game/script.rpy", line 410: expected statement.
+    persistent.cheating = 0
+                        ^
+
+File "game/script.rpy", line 517: expected statement.
+    result = "none"
+           ^
+
+File "game/script.rpy", line 518: expected statement.
+    selection = "none"
+              ^
+
+File "game/script.rpy", line 519: expected statement.
+    score = 0
+          ^
+
+File "game/script.rpy", line 520: expected statement.
+    enemy = 0
+          ^
+
+File "game/script.rpy", line 521: expected statement.
+    ties = 0
+         ^
+
+File "game/script.rpy", line 523: expected statement.
+    persistent.cheating = 0
+                        ^
+
+Ren'Py Version: Ren'Py 7.2.0.424
+Fri Mar 15 15:10:21 2019
