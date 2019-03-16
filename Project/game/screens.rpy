@@ -1545,3 +1545,6 @@ style cheats_text is gui_text
 
 style cheats_label_text:
     size gui.label_text_size
+
+style menu_choice_button is button:
+        background Frame("Obj/r.png",0,0)

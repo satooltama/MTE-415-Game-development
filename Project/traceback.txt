@@ -1,22 +1,20 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 257, in script
-    d "ก็มาดิคร้าบบ!"
-Exception: Sayer 'd' is not defined.
+  File "game/script.rpy", line 600, in script
+Exception: Sayer 'soderC' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 257, in script
-    d "ก็มาดิคร้าบบ!"
-  File "C:\Users\SANE\Downloads\renpy-7.2.0-sdk\renpy\ast.py", line 660, in execute
+  File "game/script.rpy", line 600, in script
+  File "C:\Users\SANE\Desktop\ETC\renpy-7.1.1-sdk\renpy\ast.py", line 650, in execute
     who = eval_who(self.who, self.who_fast)
-  File "C:\Users\SANE\Downloads\renpy-7.2.0-sdk\renpy\ast.py", line 564, in eval_who
+  File "C:\Users\SANE\Desktop\ETC\renpy-7.1.1-sdk\renpy\ast.py", line 560, in eval_who
     raise Exception("Sayer '%s' is not defined." % who.encode("utf-8"))
-Exception: Sayer 'd' is not defined.
+Exception: Sayer 'soderC' is not defined.
 
 Windows-8-6.2.9200
-Ren'Py 7.2.0.424
+Ren'Py 7.1.1.929
 Project 1.0
-Fri Mar 15 15:15:11 2019
+Sat Mar 16 11:28:27 2019

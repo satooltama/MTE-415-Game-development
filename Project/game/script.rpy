@@ -6,6 +6,14 @@ init:
     image whB = Image("image/wh.jpg")
     image seaB = Image("image/sea.jpg")
     image sodercampB = Image("image/mb.jpg")
+    image policeB = Image("image/police.png")
+
+    #battleBG
+    image bCc = Image("battle/battleCc.png")
+    image bFin = Image("battle/battleFin.png")
+    image bPw = Image("battle/battlePw.png")
+    image bTo = Image("battle/battleTo.png")
+    image bTu = Image("battle/battleTu.png")
 
     #character
     image soderC = Image("character/s69.png")
@@ -39,13 +47,13 @@ label start:
     #scene #scenefile
     scene sodercampB
     "ณ ค่ายทหาร"
-    show soderC
+    show soderC at right
 
     soder "เฮ้อ... เหนื่อยเป็นบ้า ดันตือสั่งซ่อมทั้งวันเลย อาบน้ำดีกว่า"
 
     soder "เฮ้ย! นั่นมัน.."
 
-    show toC
+    show toC at left
     "บังโตปรากฏตัว"
 
     to "ทหาร69! เรามาเล่นเกมข่มขืนกันเถอะ"
@@ -58,9 +66,11 @@ label start:
 
     label rps_label1:
 
-        scene pokeB
+
+        scene bTo
     # The above statement expects a file called rps (jpg or png) inside the images folder.
         show screen stats
+        #show toC at right
 
 
     label rps_select1:
@@ -69,6 +79,7 @@ label start:
             menu:
 
                 "ค้อน":
+                    style menu_choice_button
                     $selection = "ค้อน"
                     $result = renpy.random.choice(['ค้อน', 'กระดาษ', 'กรรไกร'])
                 "กระดาษ":
@@ -152,20 +163,21 @@ label pw_scene:
     scene sodercampB
     "ณ ค่ายทหาร"
 
-    show pwC
+    show pwC at right
     "ดันตือปรากฏตัว"
 
 
     pw "เสียงดังโวยวายอะไรกัน!"
 
     pw "แกอีกแล้วหรอ ทหาร69! ไปวิดพื้น 100 ครั้ง!"
+    show soderC at left
     soder "ไม่ !!!"
     pw "ไม่อย่างนั้นหรอ ! มึงเจอกู !!"
 
 
     label rps_label2:
 
-        scene pokeB
+        scene bPw
     # The above statement expects a file called rps (jpg or png) inside the images folder.
         show screen stats
 
@@ -262,13 +274,14 @@ label tufin_scene:
     scene sodercampB
     "ณ ค่ายทหารในเช้าวันต่อมา"
 
-    show prayutC
+    show prayutC at left
     prayut "เมื่อวานใครซ้อมดันตือ !!"
 
     "..."
 
     prayut "อย่าคิดว่าข้าไม่รู้นะ ทหาร69!"
 
+    show soderC at right
     soder "ชิบหายละ!"
 
     prayut "ทหาร! ลากมันไปปรับทัศนคติกับฉลาม!"
@@ -280,16 +293,16 @@ label tufin_scene:
 
     scene seaB
     "ณ ทะเลใกล้ๆค่ายทหาร"
-    show soderC
+    show soderC at left
     soder "ทำไมเราต้องมาเจออะไรแบบนี้ด้วย"
 
-    show finC
+    show finC at right
     "ฟินนี่เดอะชาร์ค ปรากฏตัว"
     fin "แฮ่~"
 
     label rps_label3:
 
-        scene pokeB
+        scene bFin
     # The above statement expects a file called rps (jpg or png) inside the images folder.
         show screen stats
 
@@ -366,9 +379,10 @@ label tufin_scene:
         fin "[selection]แฮ่~![result]"
         $ score += 1
         if score == 3:
+            fin "แฮ่ ๆๆๆๆ"
             jump tu_scene
 
-    label lose:
+    label lose3:
 
         fin "[result]แฮ่~![selection]"
         $ enemy += 1
@@ -391,14 +405,14 @@ label tu_scene:
     scene whB
     "ณ ทำเนียบรัฐบาล"
 
-    show soderC
+    show soderC at right
     soder "ลุงตูบ วันนี้คือวันตายของเจ้า"
-    show prayutC
+    show prayutC at left
     prayut "โอหัง ! แน่จริงก็เข้ามา"
 
     label rps_label4:
 
-        scene pokeB
+        scene bTu
     # The above statement expects a file called rps (jpg or png) inside the images folder.
         show screen stats
 
@@ -471,9 +485,11 @@ label tu_scene:
 
     label win4:
 
-        soder "[selection] หน่ะชนะ [result]แน่นอนอิอิ ม.69ก็ทำอะไรกูไม่ได้"
+        soder "[selection] หน่ะชนะ [result] นะไอตูบ!"
         $ score += 1
         if score == 3:
+            soder "[selection] หน่ะชนะ [result]แน่นอนอิอิ ม.69ก็ทำอะไรกูไม่ได้"
+            "หลังจากนั้น ทหาร69 ก็ถูกปลดกระจำการ"
             jump cc_scene
 
     label lose4:
@@ -500,15 +516,18 @@ label cc_scene:
     "ระหว่างทหาร69 กลับบ้าน"
     show ccC
     "ท่านชัชช่าปรากฏตัว"
-    cc "นายเป็นคนที่ล้ม ม.69 ได้สินะ อยากเจอนายมาตั้งนานแล้ว มาวัดพลังกันหน่อยสิ!"
-    show soderC
+    show ccC at right
+    cc "นายเป็นคนที่ล้ม ม.69 ได้สินะ "
+    cc "อยากเจอนายมาตั้งนานแล้ว มาวัดพลังกันหน่อยสิ!"
+    show soderC at left
     soder "อย่าดีกว่าท่านทำอะไรผมไม่ได้หรอก!"
-    cc "เมื่อก่อนฉันเคยท้าซุปเปอร์แมนต่อยโดยที่ใครแพ้ให้ใส่กางเกงในไว้ข้างนอกเชียวนะ!"
+    cc "เมื่อก่อนฉันเคยท้าซุปเปอร์แมนต่อย"
+    cc "โดยที่ใครแพ้ให้ใส่กางเกงในไว้ข้างนอกเชียวนะ!"
 
 
     label rps_label5:
 
-        scene pokeB
+        scene bCc
     # The above statement expects a file called rps (jpg or png) inside the images folder.
         show screen stats
 
@@ -576,7 +595,23 @@ label cc_scene:
 
     label lose5:
 
-        d "[result] beats [selection], you lost!"
+        cc "ไม่รู้หรอว่า [result] ชนะ [selection] ได้ หุหุ"
         $ enemy += 1
-
+        if enemy == 5:
+            soder "อะไรกันเนี่ยเป็นไปไม่ได้ ! แต่ข้ายังไหว"
+            jump rps_select5
+        elif enemy ==10:
+            cc "ไม่มีทางหรอกน่า เจ้าหน่ะได้ตายไปแล้ว !"
+            soder "ม่ายยยยยยยยยยยยย"
+            jump end_scene
         jump rps_select5
+label end_scene:
+    hide screen stats
+    $ result = "none"
+    $ selection = "none"
+    $ score = 0
+    $ enemy = 0
+    $ ties = 0
+    scene policeB
+    "หลังจากนั้น ทหาร69 ก็โดนจับเข้าคุก"
+    "ทำให้เกมนี้จบลงโดยที่สุด ขอบคุณที่ทนเล่นมาได้ขนาดนี้"
